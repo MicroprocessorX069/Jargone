@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <h1 id="paper_title" data-toggle="tooltip" title="Layman's Explanation">Research Section Title</h1>
+    <span class="glyphicon glyphicon-info-sign" id="infoIcon"></span>
+    <small>Written by Vineet on 03-09-2019</small>
+    <hr>
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="/articles">Original</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/faqs">FAQs</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link active" href="/reviews">Reader Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/notes">My Notes</a>
+          </li>
+        </ul>
+      </div>
+    <div class="card-body">
+      <ul>
+        <li><a href="/comparison">Review 1</a></li>
+        <li>Review 2</li>
+        <li>Review 3</li>
+
+      </ul>
+      </div>
+
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('#paper_title').tooltip({
+        trigger:'click'
+      });
+    })
+{%endblock%}

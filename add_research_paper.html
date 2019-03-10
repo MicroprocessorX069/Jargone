@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <h1>Add New Research Paper</h1>
+  <form action="" method="post">
+              {{ form.csrf }}
+  <div class="input text">
+                  {{ form.name.label }} {{ form.name }}</div>
+  <div class="input text">
+                  {{ form.name.label }} {{ form.name }}</div>
+  <div class="input submit">
+                  <input type="submit" value="Submit"></div>
+  </form>
+
+  <script type="text/javascript">
+  $("div").tagsinput('items')
+  </script>
+{%endblock%}

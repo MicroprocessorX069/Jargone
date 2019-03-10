@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <h1 id="note_title" >{{note.title}}</h1>
+    <hr>
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Original</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/faqs">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/reviews">Reader Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/notes">My Notes</a>
+          </li>
+        </ul>
+      </div>
+    <div class="card-body">
+      <p>{{note.body}}</p>
+      <p>{{note.notes}}</p>
+      </div>
+
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('#paper_title').tooltip({
+        trigger:'click'
+      });
+    })
+{%endblock%}

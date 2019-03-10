@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <h1 id="paper_title" data-toggle="tooltip" title="Layman's Explanation">{{article.title}}</h1>
+    <span class="glyphicon glyphicon-info-sign" id="infoIcon"></span>
+    <small>Written by {{article.author}} on {{article.create_date}}</small>
+    <hr>
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Original</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/faqs">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/reviews">Reader Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/notes">My Notes</a>
+          </li>
+        </ul>
+      </div>
+    <div class="card-body">
+      <p data-toggle="popover" title="Popover title" data-content="">{{article.body}}</p>
+      </div>
+
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('#paper_title').tooltip({
+        trigger:'click'
+      });
+    })
+{%endblock%}
